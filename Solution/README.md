@@ -61,7 +61,7 @@ def analyse_tweeter(user_handle):
     counter = 1
     
     while counter < 100 :
-       # Loop through 5 pages of tweets (total 100 tweets)
+       # Loop through 4 pages of tweets, 25 tweets per page (total 100 tweets)
         for page in tweepy.Cursor(api.search, q=target_term, max_id=largest_id, count = 25).pages(4):
 
             if not largest_id:
